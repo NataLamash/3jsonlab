@@ -1,0 +1,120 @@
+{
+  "SportsFaculty": {
+    "Sections": [
+      {
+        "Id": "1",
+        "Name": "Basketball",
+        "Coach": "John Doe",
+        "Location": "Gym A",
+        "Schedule": [
+          {
+            "Day": "Monday",
+            "Time": "10:00"
+          },
+          {
+            "Day": "Wednesday",
+            "Time": "14:00"
+          }
+        ]
+      },
+      {
+        "Id": "2",
+        "Name": "Football",
+        "Coach": "Jane Smith",
+        "Location": "Field B",
+        "Schedule": [
+          {
+            "Day": "Tuesday",
+            "Time": "16:00"
+          },
+          {
+            "Day": "Thursday",
+            "Time": "10:00"
+          }
+        ]
+      },
+      {
+        "Id": "3",
+        "Name": "Volleyball",
+        "Coach": "Mark Johnson",
+        "Location": "Gym C",
+        "Schedule": [
+          {
+            "Day": "Wednesday",
+            "Time": "12:00"
+          },
+          {
+            "Day": "Friday",
+            "Time": "15:00"
+          }
+        ]
+      },
+      {
+        "Id": "4",
+        "Name": "Tennis",
+        "Coach": "Emily Davis",
+        "Location": "Court A",
+        "Schedule": [
+          {
+            "Day": "Monday",
+            "Time": "09:00"
+          },
+          {
+            "Day": "Thursday",
+            "Time": "13:00"
+          }
+        ]
+      },
+      {
+        "Id": "5",
+        "Name": "Swimming",
+        "Coach": "Michael Brown",
+        "Location": "Pool 1",
+        "Schedule": [
+          {
+            "Day": "Tuesday",
+            "Time": "11:00"
+          },
+          {
+            "Day": "Friday",
+            "Time": "14:00"
+          }
+        ]
+      },
+      {
+        "Id": "6",
+        "Name": "Gymnastics",
+        "Coach": "Anna Wilson",
+        "Location": "Gym B",
+        "Schedule": [
+          {
+            "Day": "Wednesday",
+            "Time": "10:00"
+          },
+          {
+            "Day": "Saturday",
+            "Time": "11:00"
+          }
+        ]
+      },
+      {
+        "Id": "7",
+        "Name": "Yoga",
+        "Coach": "Sophia Miller",
+        "Location": "Studio 1",
+        "Schedule": [
+          {
+            "Day": "Monday",
+            "Time": "08:00"
+          },
+          {
+            "Day": "Thursday",
+            "Time": "18:00"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+

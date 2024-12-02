@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_3jsonlab.EditPage"
+             BackgroundColor="#EDF4FF">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Edit" FontAttributes="Bold" FontSize="24" TextColor="Black" HorizontalOptions="Center" Margin="0, 0, 0, 20"/>
+
+            <!-- Section Information -->
+            <Label Text="Section" FontAttributes="Bold" FontSize="18" TextColor="Black" Margin="0, 10"/>
+            <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto">
+                <Label Text="Id" VerticalTextAlignment="Center" TextColor="Black"/>
+                <Entry x:Name="EntryId" Placeholder="Type here" Grid.Column="1" IsEnabled="False"/>
+                <!-- Заблоковане для редагування -->
+
+                <Label Text="Name" Grid.Row="1" VerticalTextAlignment="Center" TextColor="Black"/>
+                <Entry x:Name="EntryName" TextColor="Black" Placeholder="Type here" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Coach" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
+                <Entry x:Name="EntryCoach" TextColor="Black" Placeholder="Type here" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Location" Grid.Row="3" VerticalTextAlignment="Center" TextColor="Black"/>
+                <Entry x:Name="EntryLocation" TextColor="Black" Placeholder="Type here" Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+
+            <!-- Schedule Information -->
+            <Label Text="Schedule" FontAttributes="Bold" FontSize="18" TextColor="Black" Margin="0, 10"/>
+            <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto">
+                <Label Text="Day" VerticalTextAlignment="Center" TextColor="Black"/>
+                <Entry x:Name="EntryDay" TextColor="Black" Placeholder="Type here" Grid.Column="1"/>
+
+                <Label Text="Time" Grid.Row="1" VerticalTextAlignment="Center" TextColor="Black"/>
+                <Entry x:Name="EntryTime" TextColor="Black" Placeholder="Type here" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+
+            <!-- Edit Button -->
+            <Button Text="Edit" BackgroundColor="#69C0E2" TextColor="White" Clicked="OnEditButtonClicked" VerticalOptions="End" Margin="0, 20, 0, 0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

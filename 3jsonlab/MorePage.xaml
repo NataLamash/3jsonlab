@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_3jsonlab.MorePage"
+             BackgroundColor="#EDF4FF"
+             Padding="20">
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="More" TextColor="Black" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" Margin="0, 0, 0, 20"/>
+
+            <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *" Margin="10">
+                <Label Text="Day" TextColor="Black" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"/>
+                <Label Text="Time" TextColor="Black" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"/>
+
+                <CollectionView Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="*, *" Padding="5">
+                                <Label Grid.Column="0" Text="{Binding Day}" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Grid.Column="1" Text="{Binding Time}" TextColor="Black" VerticalTextAlignment="Center"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+
+            <Button Text="Close" BackgroundColor="#69C0E2" TextColor="White" Clicked="OnCloseClicked" VerticalOptions="End" Margin="0, 20, 0, 0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

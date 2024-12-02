@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_3jsonlab.AddPage"
+             BackgroundColor="#EDF4FF">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Add" TextColor="Black" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" Margin="0, 0, 0, 20"/>
+
+            <!-- Section Information -->
+            <Label Text="Section" TextColor="Black" FontAttributes="Bold" FontSize="18" Margin="0, 10"/>
+            <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto">
+                <Label Text="Id" TextColor="Black" VerticalTextAlignment="Center"/>
+                <Entry TextColor="Black" x:Name="EntryId" Placeholder="Type here" Grid.Column="1"/>
+
+                <Label Text="Name" TextColor="Black" Grid.Row="1" VerticalTextAlignment="Center"/>
+                <Entry TextColor="Black" x:Name="EntryName" Placeholder="Type here" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Coach" TextColor="Black" Grid.Row="2" VerticalTextAlignment="Center"/>
+                <Entry TextColor="Black" x:Name="EntryCoach" Placeholder="Type here" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Location" TextColor="Black" Grid.Row="3" VerticalTextAlignment="Center"/>
+                <Entry TextColor="Black" x:Name="EntryLocation" Placeholder="Type here" Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+
+            <!-- Schedule Information -->
+            <Label Text="Schedule" TextColor="Black" FontAttributes="Bold" FontSize="18" Margin="0, 10"/>
+            <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto">
+                <Label Text="Day" TextColor="Black"  VerticalTextAlignment="Center"/>
+                <Entry TextColor="Black" x:Name="EntryDay" Placeholder="Type here" Grid.Column="1"/>
+
+                <Label Text="Time" Grid.Row="1" TextColor="Black" VerticalTextAlignment="Center"/>
+                <Entry TextColor="Black" x:Name="EntryTime" Placeholder="Type here" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+
+            <!-- Add Button -->
+            <Button Text="Add" BackgroundColor="#69C0E2" TextColor="White" Clicked="OnAddButtonClicked" VerticalOptions="End" Margin="0, 20, 0, 0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

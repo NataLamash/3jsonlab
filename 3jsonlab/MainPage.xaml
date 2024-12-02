@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_3jsonlab.MainPage"
+             BackgroundColor="#EDF4FF">
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, *" ColumnDefinitions="Auto, *">
+            <!-- Header -->
+            <Label Grid.Row="0" TextColor="Black" Grid.ColumnSpan="2" Text="Sport Sections"
+                   FontSize="24" FontAttributes="Bold"
+                   VerticalOptions="Start" HorizontalOptions="Center"
+                   Margin="0, 10"/>
+
+            <!-- Action Buttons -->
+            <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Start" Spacing="10" Margin="10">
+                <Button Text="Filter" BackgroundColor="#69C0E2" TextColor="White" Clicked="OnFilterClicked"/>
+                <Button Text="Add" BackgroundColor="#69C0E2" TextColor="White" Clicked ="OnAddClicked"/>
+                <Button Text="Edit" BackgroundColor="#69C0E2" TextColor="White" Clicked ="OnEditClicked"/>
+                <Button Text="Delete" BackgroundColor="#69C0E2" TextColor="White" Clicked="OnDeleteClicked"/>
+                <Button Text="More" BackgroundColor="#69C0E2" TextColor="White" Clicked="OnMoreClicked"/>
+            </StackLayout>
+
+            <!-- Toolbar Buttons -->
+            <HorizontalStackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start" Spacing="5">
+                <Button Text="Open file" BackgroundColor="#69C0E2" TextColor="White" Clicked="OnOpenFileClicked"/>
+                <Button Text="Save file" BackgroundColor="#69C0E2" TextColor="White" Clicked="OnSaveFileClicked"/>
+                <Button Text="About" BackgroundColor="#69C0E2" TextColor="White" Clicked="OnAboutClicked"/>
+            </HorizontalStackLayout>
+
+            <!-- Data Table -->
+            <Grid Grid.Row="1" Grid.Column="1" Padding="10" Margin="10" BackgroundColor="#EDF4FF">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Table Headers with Borders -->
+
+                <Label Grid.Row="0" Grid.Column="1" Text="Id" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Name" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="3" Text="Coach" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="4" Text="Location" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                <BoxView Grid.Row="0" Grid.ColumnSpan="5" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End" Margin="0, 10, 0, 0"/>
+
+                <!-- Table Content Placeholder -->
+                <CollectionView Grid.Row="1" Grid.ColumnSpan="5" ItemsSource="{Binding Sections}" BackgroundColor="#EDF4FF">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="0.2*, 0.4*, 1*, 1*, 1*" Padding="5">
+                                <!-- Horizontal Lines for the Rows -->
+                                <BoxView Grid.Row="0" Grid.ColumnSpan="5" HeightRequest="1" BackgroundColor="Gray" VerticalOptions="Start"/>
+
+                                <!-- Data Fields -->
+                                <RadioButton Grid.Column="0" VerticalOptions="Center" GroupName="SectionsGroup" CheckedChanged="OnRadioButtonCheckedChanged" BindingContext="{Binding}"/>
+                                <Label Grid.Column="1" Text="{Binding Id}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                                <Label Grid.Column="2" Text="{Binding Name}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                                <Label Grid.Column="3" Text="{Binding Coach}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                                <Label Grid.Column="4" Text="{Binding Location}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+
+                                <!-- Horizontal Lines for Each Row End -->
+                                <BoxView Grid.Row="0" Grid.ColumnSpan="5" HeightRequest="1" BackgroundColor="Gray" VerticalOptions="End"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

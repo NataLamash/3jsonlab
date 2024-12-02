@@ -1,0 +1,52 @@
+{
+  "Sections": [
+    {
+      "Id": "1",
+      "Name": "Basketball",
+      "Coach": "John Doe",
+      "Location": "Gym A",
+      "Schedule": [
+        {
+          "Day": "Monday",
+          "Time": "10:00"
+        },
+        {
+          "Day": "Wednesday",
+          "Time": "14:00"
+        }
+      ]
+    },
+    {
+      "Id": "2",
+      "Name": "Foo",
+      "Coach": "Jane Johnson",
+      "Location": "Field",
+      "Schedule": [
+        {
+          "Day": "Wednesday",
+          "Time": "rhfhrjjr"
+        },
+        {
+          "Day": "Thursday",
+          "Time": "10:00"
+        }
+      ]
+    },
+    {
+      "Id": "3",
+      "Name": "Volleyball",
+      "Coach": "Mark Johnson",
+      "Location": "Gym C",
+      "Schedule": [
+        {
+          "Day": "Wednesday",
+          "Time": "12:00"
+        },
+        {
+          "Day": "Friday",
+          "Time": "15:00"
+        }
+      ]
+    }
+  ]
+}
